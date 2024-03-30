@@ -9,6 +9,12 @@
 #include <cassert>
 #include <iostream>
 
+inline int random(int begin, int end)
+{
+  srand(time(NULL));
+  return (unsigned int)rand() % (end - begin + 1) + begin;
+}
+
 inline void message(const std::string &msg, bool lf = true)
 {
     std::cout<<&msg;

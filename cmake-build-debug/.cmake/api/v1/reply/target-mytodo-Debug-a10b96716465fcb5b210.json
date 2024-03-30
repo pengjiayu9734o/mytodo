@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "D:/development/code/mytodo/bin/mytodo.exe"
+			"path" : "C:/dev/mytodo/bin/mytodo.exe"
 		},
 		{
-			"path" : "D:/development/code/mytodo/bin/mytodo.pdb"
+			"path" : "C:/dev/mytodo/bin/mytodo.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -105,7 +105,7 @@
 			[
 				{
 					"backtrace" : 6,
-					"path" : "D:/development/code/mytodo/include"
+					"path" : "C:/dev/mytodo/include"
 				}
 			],
 			"language" : "CXX",
@@ -122,7 +122,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -162,7 +163,8 @@
 				0,
 				1,
 				2,
-				3
+				3,
+				4
 			]
 		}
 	],
@@ -172,6 +174,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/I18n.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/block.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

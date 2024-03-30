@@ -8,12 +8,11 @@
 
 int main(int argc, char **argv)
 {
-#if _TEST_
-    test_case1();
-    getchar();
-#else
     SetSystemEnv();
     Scene scene;
     int needEraseGrids = inputDifficulty();
     scene.generate();
+    scene.eraseRandomGrids(needEraseGrids);
+
+    scene.play();
 }
