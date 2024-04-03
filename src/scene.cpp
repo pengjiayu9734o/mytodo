@@ -7,6 +7,7 @@
 #include "scene.h"
 #include "block.h"
 #include "utility.inl"
+#include "display_symbol.h"
 #include <cmath>
 #include <unordered_map>
 #include <memory.h>
@@ -72,7 +73,7 @@ void Scene::init()
 
 void Scene::eraseRandomGrids(const int count) {
   point_value_t p = {0, State::ERASE};
-  
+
   std::vector<int> v(81);
   for (int i = 0; i < 81; ++i) {
     v[i] = i;
@@ -122,4 +123,31 @@ void Scene::generate()
   }
 
   assert(isComplete());
+}
+
+void Scene::printUnderline(int line_no) const
+{
+  auto is_curline = _cur_point.y == line_no;
+  for (int column = 0; column < 9; ++column) {
+    std::cout << CORNER << LINE << (is_curline ? (_cur_point.x == column ? ARROW : LINE) : LINE) << LINE;
+  }
+  std::cout << CORNER;
+}
+
+void Scene::show() const
+{
+  cls();
+
+  printUnderline();
+
+  for (int row = 0; row < _max_column; ++row) {
+    Block block =_row_block[row];
+    block.print();
+    printUnderline(row);
+  }
+}
+
+void Scene::play()
+{
+  show();
 }
