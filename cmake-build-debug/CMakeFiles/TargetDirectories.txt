@@ -1,3 +1,0 @@
-C:/dev/mytodo/cmake-build-debug/CMakeFiles/mytodo.dir
-C:/dev/mytodo/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/dev/mytodo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
