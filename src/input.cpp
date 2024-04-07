@@ -7,7 +7,7 @@
 #include <string>
 
 //返回初始化的格子数量
-int difficulty()
+int inputDifficulty()
 {
     cls();
     std::string cmd;

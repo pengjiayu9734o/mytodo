@@ -18,7 +18,7 @@ public:
 
     bool setCurValue(const int nCurValue, int& lastValue);
     bool setPointValue(const point_t&, const int);
-    point_t getPoint();
+    point_t getCurPoint();
 
     void eraseRandomGrids(const int count);
     bool isComplete();

@@ -19,8 +19,8 @@ public:
     bool execute(int nInputValue);
     void undo();
     point_t getPoint() {return _stPoint;}
-    [[nodiscard]] int getPreValue() const {return _nPreValue;}
-    [[nodiscard]] int getCurValue() const {return _nCurValue;}
+    int getPreValue() const {return _nPreValue;}
+    int getCurValue() const {return _nCurValue;}
     void setPoint(const point_t& point) {_stPoint = point;}
     void setPreValue(int preValue) {_nPreValue = preValue;}
     void setCurValue(int curValue) {_nCurValue = curValue;}

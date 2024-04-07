@@ -10,6 +10,7 @@ class Block {
     static const int MAX_COUNT = 9;
 public:
     Block();
+    ~Block();
     bool isValid() const;
     bool isFull() const;
     void print() const;

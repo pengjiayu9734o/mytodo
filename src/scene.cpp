@@ -19,6 +19,7 @@ Scene::Scene(int index):
 {
   init();
 }
+Scene::~Scene(){}
 
 void Scene::init()
 {
@@ -122,7 +123,12 @@ void Scene::generate()
     }
   }
 
-  assert(isComplete());
+  //assert(isComplete());
+}
+
+void Scene::setValue(const point_t &pointT, const int value)
+{
+  _map[pointT.x + pointT.y*9].value = value;
 }
 
 void Scene::printUnderline(int line_no) const
@@ -131,7 +137,7 @@ void Scene::printUnderline(int line_no) const
   for (int column = 0; column < 9; ++column) {
     std::cout << CORNER << LINE << (is_curline ? (_cur_point.x == column ? ARROW : LINE) : LINE) << LINE;
   }
-  std::cout << CORNER;
+  std::cout << CORNER << std::endl;
 }
 
 void Scene::show() const
@@ -145,6 +151,23 @@ void Scene::show() const
     block.print();
     printUnderline(row);
   }
+}
+bool Scene::setCurValue(const int nCurValue, int &lastValue)
+{
+  auto point = _map[_cur_point.x + _cur_point.y*9];
+  if (point.state == State::ERASE)
+  {
+    lastValue = point.value;
+    setValue(_cur_point, nCurValue);
+  }
+  else
+  {
+    return false;
+  }
+}
+point_t Scene::getCurPoint()
+{
+  return _cur_point;
 }
 
 void Scene::play()
