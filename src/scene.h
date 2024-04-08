@@ -6,6 +6,7 @@
 #include "common.h"
 #include "command.h"
 #include "block.h"
+#include "I18n.h"
 #include <vector>
 class Scene
 {
@@ -16,7 +17,7 @@ public:
     void generate();
     void show() const;
 
-    bool setCurValue(const int nCurValue, int& lastValue);
+    bool setCurValue(const int nCurValue);
     bool setPointValue(const point_t&, const int);
     point_t getCurPoint();
 
